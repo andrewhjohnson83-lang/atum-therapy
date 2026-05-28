@@ -1,151 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Atum Therapy</title>
-  <meta name="description" content="Get in touch with Atum Therapy. Schedule a session with David Lancaster or ask us anything about ATUM THERAPY." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<!-- ===== HEADER ===== -->
-<header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="https://atumtherapy.com/wp-content/uploads/2023/11/Atum-Therapy-Logo-Custom.png" alt="Atum Therapy" />
-      </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</header>
-
-<!-- ===== BANNER ===== -->
-<img
-  class="page-banner"
-  src="https://atumtherapy.com/wp-content/uploads/2023/11/Switzerland-Mountain-Banner.jpg"
-  alt="Mountain landscape banner"
-/>
-
-<!-- ===== CONTACT SECTION ===== -->
-<section>
-  <div class="container">
-    <div class="two-col">
-
-      <!-- Left: Info -->
-      <div>
-        <h1>Contact Us for Your Healing Journey</h1>
-        <p style="margin-top:1rem;">
-          We'd love to hear from you. Whether you have questions about ATUM THERAPY, want to share your story, or are ready to schedule a session with David Lancaster, we're here to support you.
-        </p>
-        <p>
-          Use the contact form or reach us directly. We're honored to walk with you on your path to healing, and we're committed to creating a supportive, nurturing space every step of the way.
-        </p>
-        <p>
-          <strong>Email:</strong> <a href="mailto:contact@atumtherapy.com">contact@atumtherapy.com</a>
-        </p>
-        <p>
-          <strong>Phone / Text:</strong> <a href="tel:3026605879">302-660-5879</a>
-        </p>
-
-      </div>
-
-      <!-- Right: Form -->
-      <div>
-        <div class="contact-form">
-          <h2 style="margin-bottom:1.5rem;">Send a Message</h2>
-          <form id="contactForm" novalidate>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="first_name" placeholder="First name" />
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="last_name" placeholder="Last name" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email <span class="required-star" aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="Phone number" />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message <span class="required-star" aria-hidden="true">*</span></label>
-              <textarea id="message" name="message" placeholder="How can David help you?" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
-
-            <p id="formSuccess" style="display:none; margin-top:1rem; color:var(--color-primary-dark); font-weight:600; background:var(--color-bg-light); padding:0.75rem 1rem; border-radius:var(--radius-sm);">
-              Thank you! Your message has been sent. We'll be in touch soon.
-            </p>
-            <p id="formError" style="display:none; margin-top:1rem; color:#b04030; font-weight:500; background:#fff5f3; padding:0.75rem 1rem; border-radius:var(--radius-sm); border:1px solid #f0c0b0;">
-              Please fill in all required fields.
-            </p>
-          </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Atum Therapy</title>
+    <meta
+      name="description"
+      content="Get in touch with Atum Therapy. Schedule a session with David Lancaster or ask us anything about ATUM THERAPY."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="index.html" class="logo">
+            <img
+              src="https://atumtherapy.com/wp-content/uploads/2023/11/Atum-Therapy-Logo-Custom.png"
+              alt="Atum Therapy"
+            />
+          </a>
+          <button
+            class="menu-toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
         </div>
       </div>
+    </header>
 
-    </div>
-  </div>
-</section>
+    <!-- ===== BANNER ===== -->
+    <img
+      class="page-banner"
+      src="https://atumtherapy.com/wp-content/uploads/2023/11/Switzerland-Mountain-Banner.jpg"
+      alt="Mountain landscape banner"
+    />
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-inner">
-      <p>Copyright &copy; 2026 Atum Therapy — Northern Delaware</p>
-      <p>
-        <a href="tel:3026605879">302-660-5879</a>
-        &nbsp;&middot;&nbsp;
-        <a href="mailto:contact@atumtherapy.com">contact@atumtherapy.com</a>
-      </p>
-    </div>
-  </div>
-</footer>
+    <!-- ===== CONTACT SECTION ===== -->
+    <section>
+      <div class="container">
+        <div class="two-col">
+          <!-- Left: Info -->
+          <div>
+            <h1>Contact Us for Your Healing Journey</h1>
+            <p style="margin-top: 1rem">
+              We'd love to hear from you. Whether you have questions about ATUM
+              THERAPY, want to share your story, or are ready to schedule a
+              session with David Lancaster, we're here to support you.
+            </p>
+            <p>
+              Use the contact form or reach us directly. We're honored to walk
+              with you on your path to healing, and we're committed to creating
+              a supportive, nurturing space every step of the way.
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:davidlancaster432@gmail.com"
+                >davidlancaster432@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Phone / Text:</strong>
+              <a href="tel:3026605879">302-660-5879</a>
+            </p>
+          </div>
 
+          <!-- Right: Form -->
+          <div>
+            <div class="contact-form">
+              <h2 style="margin-bottom: 1.5rem">Send a Message</h2>
+              <form id="contactForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="first_name"
+                      placeholder="First name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="last_name"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
 
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
+                <div class="form-group">
+                  <label for="email"
+                    >Email
+                    <span class="required-star" aria-hidden="true"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
 
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const success = document.getElementById('formSuccess');
-    const error = document.getElementById('formError');
-    success.style.display = 'none';
-    error.style.display = 'none';
-    if (!email || !message) {
-      error.style.display = 'block';
-      return;
-    }
-    success.style.display = 'block';
-    this.reset();
-  });
-</script>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone number"
+                  />
+                </div>
 
-</body>
+                <div class="form-group">
+                  <label for="message"
+                    >Message
+                    <span class="required-star" aria-hidden="true"
+                      >*</span
+                    ></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="How can David help you?"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="width: 100%"
+                >
+                  Send Message
+                </button>
+
+                <p
+                  id="formSuccess"
+                  style="
+                    display: none;
+                    margin-top: 1rem;
+                    color: var(--color-primary-dark);
+                    font-weight: 600;
+                    background: var(--color-bg-light);
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                  "
+                >
+                  Thank you! Your message has been sent. We'll be in touch soon.
+                </p>
+                <p
+                  id="formError"
+                  style="
+                    display: none;
+                    margin-top: 1rem;
+                    color: #b04030;
+                    font-weight: 500;
+                    background: #fff5f3;
+                    padding: 0.75rem 1rem;
+                    border-radius: var(--radius-sm);
+                    border: 1px solid #f0c0b0;
+                  "
+                >
+                  Please fill in all required fields.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p>Copyright &copy; 2026 Atum Therapy — Northern Delaware</p>
+          <p>
+            <a href="tel:3026605879">302-660-5879</a>
+            &nbsp;&middot;&nbsp;
+            <a href="mailto:davidlancaster432@gmail.com"
+              >davidlancaster432@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggle.addEventListener("click", () => {
+        const open = navLinks.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open);
+      });
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+          const success = document.getElementById("formSuccess");
+          const error = document.getElementById("formError");
+          success.style.display = "none";
+          error.style.display = "none";
+          if (!email || !message) {
+            error.style.display = "block";
+            return;
+          }
+          success.style.display = "block";
+          this.reset();
+        });
+    </script>
+  </body>
 </html>
