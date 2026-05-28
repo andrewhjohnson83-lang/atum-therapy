@@ -362,6 +362,11 @@ section { padding: 5rem 0; }
   box-shadow: 0 20px 56px rgba(14,26,19,0.2);
 }
 
+.tools-list {
+    columns: 2;
+    gap: 3rem;
+}
+
 /* ===== CARDS / GRID ===== */
 
 .cards-grid {
@@ -791,6 +796,10 @@ section { padding: 5rem 0; }
 
   .sticky-cta { display: flex; }
   .footer-inner { flex-direction: column; text-align: center; }
+  .tools-list { 
+    columns: 1;
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
