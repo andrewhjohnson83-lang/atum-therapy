@@ -144,11 +144,10 @@
               incorporate this powerful ancient technique into Atum Therapy.
             </p>
           </div>
-          <div>
-            <img
-              src="images/experience1.jpg"
-              alt="David Landcaster — Atum Therapy"
-            />
+          <div class="experience-slideshow">
+            <img src="images/experience1.jpg" class="active" alt="David Landcaster — Atum Therapy"/>
+            <img src="images/experience2.jpg" alt="David Landcaster — Atum Therapy"/>
+            <img src="images/experience3.jpg" alt="David Landcaster — Atum Therapy"/>
           </div>
         </div>
       </div>
@@ -344,6 +343,15 @@
         const open = navLinks.classList.toggle("open");
         toggle.setAttribute("aria-expanded", open);
       });
+    </script>
+    <script>
+      const slides = document.querySelectorAll(".experience-slideshow img");
+      let current = 0;
+      setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+      }, 5000);
     </script>
   </body>
 </html>
