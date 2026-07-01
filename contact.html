@@ -162,20 +162,6 @@
                 </button>
 
                 <p
-                  id="formSuccess"
-                  style="
-                    display: none;
-                    margin-top: 1rem;
-                    color: var(--color-primary-dark);
-                    font-weight: 600;
-                    background: var(--color-bg-light);
-                    padding: 0.75rem 1rem;
-                    border-radius: var(--radius-sm);
-                  "
-                >
-                  Thank you! Your message has been sent. We'll be in touch soon.
-                </p>
-                <p
                   id="formError"
                   style="
                     display: none;
@@ -234,12 +220,50 @@
       </div>
     </footer>
 
+    <!-- ===== THANK YOU MODAL ===== -->
+    <div
+      class="modal-overlay"
+      id="thankYouModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="thankYouTitle"
+    >
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close">
+          &times;
+        </button>
+        <div class="modal-icon">🌿</div>
+        <h3 id="thankYouTitle">Request Received</h3>
+        <p>
+          Thank you for reaching out. Your message has been received, and
+          we'll be in touch soon to support your healing journey.
+        </p>
+        <button class="btn btn-primary" id="modalOkBtn">Close</button>
+      </div>
+    </div>
+
     <script>
       const toggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
       toggle.addEventListener("click", () => {
         const open = navLinks.classList.toggle("open");
         toggle.setAttribute("aria-expanded", open);
+      });
+
+      const thankYouModal = document.getElementById("thankYouModal");
+      const closeThankYouModal = () =>
+        thankYouModal.classList.remove("open");
+      document
+        .getElementById("modalClose")
+        .addEventListener("click", closeThankYouModal);
+      document
+        .getElementById("modalOkBtn")
+        .addEventListener("click", closeThankYouModal);
+      thankYouModal.addEventListener("click", (e) => {
+        if (e.target === thankYouModal) closeThankYouModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeThankYouModal();
       });
 
       document
@@ -249,9 +273,7 @@
           const form = this;
           const email = document.getElementById("email").value.trim();
           const message = document.getElementById("message").value.trim();
-          const success = document.getElementById("formSuccess");
           const error = document.getElementById("formError");
-          success.style.display = "none";
           error.style.display = "none";
           if (!email || !message) {
             error.textContent = "Please fill in all required fields.";
@@ -265,8 +287,8 @@
             body: new URLSearchParams(new FormData(form)).toString(),
           })
             .then(() => {
-              success.style.display = "block";
               form.reset();
+              thankYouModal.classList.add("open");
             })
             .catch(() => {
               error.textContent =
