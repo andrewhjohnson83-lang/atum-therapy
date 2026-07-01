@@ -75,7 +75,21 @@
           <div>
             <div class="contact-form">
               <h2 style="margin-bottom: 1.5rem">Send a Message</h2>
-              <form id="contactForm" novalidate>
+              <form
+                id="contactForm"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                novalidate
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p style="position: absolute; left: -9999px" aria-hidden="true">
+                  <label>
+                    Don't fill this out if you're human:
+                    <input name="bot-field" tabindex="-1" autocomplete="off" />
+                  </label>
+                </p>
                 <div class="form-row">
                   <div class="form-group">
                     <label for="firstName">First Name</label>
@@ -232,6 +246,7 @@
         .getElementById("contactForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+          const form = this;
           const email = document.getElementById("email").value.trim();
           const message = document.getElementById("message").value.trim();
           const success = document.getElementById("formSuccess");
@@ -239,11 +254,25 @@
           success.style.display = "none";
           error.style.display = "none";
           if (!email || !message) {
+            error.textContent = "Please fill in all required fields.";
             error.style.display = "block";
             return;
           }
-          success.style.display = "block";
-          this.reset();
+
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)).toString(),
+          })
+            .then(() => {
+              success.style.display = "block";
+              form.reset();
+            })
+            .catch(() => {
+              error.textContent =
+                "Something went wrong sending your message. Please call or text us directly.";
+              error.style.display = "block";
+            });
         });
     </script>
   </body>
